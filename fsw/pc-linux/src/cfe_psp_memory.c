@@ -762,20 +762,21 @@ int32 CFE_PSP_GetKernelTextSegmentInfo(cpuaddr *PtrToKernelSegment, uint32 *Size
 */
 int32 CFE_PSP_GetCFETextSegmentInfo(cpuaddr *PtrToCFESegment, uint32 *SizeOfCFESegment)
 {
-   int32 return_code;
-   
-   if ( SizeOfCFESegment == NULL )
-   {
-      return_code = CFE_PSP_ERROR;
-   }
-   else
-   {
-      *PtrToCFESegment = (cpuaddr)(&_init);
-      *SizeOfCFESegment = (uint32) (((cpuaddr) &_fini) - ((cpuaddr) &_init));
-      
-      return_code = CFE_PSP_SUCCESS;
-   }
-   
-   return(return_code);
+  return CFE_PSP_ERROR_NOT_IMPLEMENTED;
+//   int32 return_code;
+//
+//   if ( SizeOfCFESegment == NULL )
+//   {
+//      return_code = CFE_PSP_ERROR;
+//   }
+//   else
+//   {
+//      *PtrToCFESegment = (cpuaddr)(&_init);
+//      *SizeOfCFESegment = (uint32) (((cpuaddr) &_fini) - ((cpuaddr) &_init));
+//
+//      return_code = CFE_PSP_SUCCESS;
+//   }
+//
+//   return(return_code);
 }
 
